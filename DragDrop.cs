@@ -13,13 +13,11 @@ public class DragDrop : MonoBehaviour
   {
     if (isDragging)
     {
-      print("updating");
       transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
     }
   }
   private void OnCollisionEnter2D(Collision2D collision)
   {
-    print("in the zone");    
     isOverDropZone = true;
     dropZone = collision.gameObject;
   }
